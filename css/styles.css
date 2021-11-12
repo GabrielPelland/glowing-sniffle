@@ -1,0 +1,37 @@
+:root {
+  --primary-dark: #211539;
+  --secondary-dark: #685272;
+}
+
+body {
+  background-color: var(--primary-dark);
+}
+
+/* header */
+.header {
+  margin-top: 46px;
+  margin-bottom: 46px;
+}
+
+/* Flexbox */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Spacer */
+.spacer {
+  height: 82px;
+}
+
+.line-full {
+  width: 100%;
+  border: 1px solid var(--secondary-dark);
+}
+/* Position */
+.margin-main-x {
+  margin-left: 50px;
+  margin-right: 50px;
+}
