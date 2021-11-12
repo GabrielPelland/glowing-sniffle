@@ -14,3 +14,39 @@
     margin-top: 110px;
 }
 
+#img-mars {
+    height: 1200px;
+    width: 1150px;
+    margin-top: -400px;
+    margin-left: -100px;
+
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    position: absolute;
+}
+
+#img-rocket {
+    margin-left: 175px;
+    margin-top: 125px;
+    margin-bottom: -10px;
+}
+
+#img-venus {
+    position: absolute;
+    left: 0px;
+    margin-top: -725px;
+    transform: translate(-30.5%, 0);
+    position: absolute;
+}
+#title-01 {
+    margin-top: 340px;
+    margin-left: 225px
+}
+
+#title-02 {
+    margin-top: 170px;
+}
+

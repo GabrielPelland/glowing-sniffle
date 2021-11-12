@@ -96,6 +96,14 @@ a.primary:hover {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.content-flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
 
 /* Spacer */
 .spacer {
