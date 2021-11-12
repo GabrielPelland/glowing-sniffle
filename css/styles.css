@@ -3,7 +3,7 @@
   --secondary-dark: #685272;
   --font-family: 'Poppins', sans-serif;
   --font-light: #FFFFFF;
-  --font-gray: #dcc1e7;
+  --font-gray: #FFFFFF;
 }
 
 body {
@@ -39,7 +39,7 @@ h3 {
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
-  line-height: 15px;
+  line-height: 20px;
   text-transform: uppercase;
 }
 h4 {
@@ -54,13 +54,41 @@ p {
   font-family: var(--font-family);
   color: var(--font-gray);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 15px;
+  line-height: 25px;
+}
+/* Box */
+.text-box {
+  width: 275px;
+}
+/* Button */
+a.primary {
+  font-family: var(--font-family);
+  color: var(--primary-dark);
+  border: 1px solid white;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
   line-height: 15px;
+  border-radius: 7px;
+
+  text-decoration: none;
+
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: 0.5s;
 }
 
-/* Button */
-
+a.primary:hover {
+  color: white;
+  border: 1px solid white;
+  background-color: var(--primary-dark);
+  transition: 0.5s;
+}
 /* Flexbox */
 .flex-container {
   display: flex;
