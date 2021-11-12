@@ -1,6 +1,9 @@
 :root {
   --primary-dark: #211539;
   --secondary-dark: #685272;
+  --font-family: 'Poppins', sans-serif;
+  --font-light: #FFFFFF;
+  --font-gray: #dcc1e7;
 }
 
 body {
@@ -12,6 +15,51 @@ body {
   margin-top: 46px;
   margin-bottom: 46px;
 }
+
+/* Text */
+h1 {
+  font-family: var(--font-family);
+  color: var(--font-light);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 75px;
+  line-height: 66px;
+}
+h2 {
+  font-family: var(--font-family);
+  color: var(--font-light);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 66px;
+}
+h3 {
+  font-family: var(--font-family);
+  color: var(--font-gray);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+h4 {
+  font-family: var(--font-family);
+  color: var(--font-light);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+}
+p {
+  font-family: var(--font-family);
+  color: var(--font-gray);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+/* Button */
 
 /* Flexbox */
 .flex-container {
