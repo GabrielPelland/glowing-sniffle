@@ -14,6 +14,8 @@ body {
 .header {
   margin-top: 46px;
   margin-bottom: 46px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 /* Text */
@@ -118,4 +120,24 @@ a.primary:hover {
 .margin-main-x {
   margin-left: 50px;
   margin-right: 50px;
+}
+
+/* Main container */
+.main-container {
+  margin: 25px;
+  border: 2px solid var(--secondary-dark);
+  border-radius: 35px;
+  max-width: 1590px;
+}
+
+@media (min-width: 1590px) {
+  .main-container {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var(--secondary-dark);
+    border-radius: 35px;
+    max-width: 1590px;
+  }
 }

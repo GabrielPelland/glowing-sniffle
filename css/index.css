@@ -29,17 +29,13 @@
 }
 
 #img-rocket {
+    margin-bottom: -110px;
     margin-left: 175px;
-    margin-top: 125px;
-    margin-bottom: -10px;
 }
 
 #img-venus {
-    position: absolute;
-    left: 0px;
-    margin-top: -725px;
-    transform: translate(-30.5%, 0);
-    position: absolute;
+    margin-bottom: -4px;
+    margin-top: -630px;
 }
 #title-01 {
     margin-top: 340px;
@@ -47,6 +43,6 @@
 }
 
 #title-02 {
-    margin-top: 170px;
+    margin-top: 110px;
 }
 
