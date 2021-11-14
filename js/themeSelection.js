@@ -12,7 +12,7 @@ function themeSelection() {
 }
 
 function setDark() {
-  var confirm = window.confirm("Souhaitez-vous annueler cette action ?");
+  var confirm = window.confirm("Souhaitez-vous annuler cette action ?");
   if (confirm) {
     themeSelection();
   }
@@ -25,7 +25,7 @@ function setDark() {
 }
 
 function setLight() {
-  var confirm = window.confirm("Souhaitez-vous annueler cette action ?");
+  var confirm = window.confirm("Souhaitez-vous annuler cette action ?");
   if (confirm) {
     themeSelection();
   }
