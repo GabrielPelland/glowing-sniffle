@@ -7,16 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursed Html </title>
 
-    <!-- import -->
+<!-- import -->
+    <!-- styles -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
 
-
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- scripts -->
     <script src="js/themeSelection.js" ></script>
+    <script src="js/buttonMove.js" ></script>
 </head>
 
 <body>
@@ -43,7 +48,9 @@
             <div>
                 <div id="left-content">
                     <h2>Explore l'univers d'internet</h2>
-                    <a href="#" class="primary mouseOver">Joindre l'aventure</a>
+                    <div id="button-move">
+                        <a href="#" class="default mouseOver">Joindre l'aventure</a>
+                    </div>
                     <div class="flex-container" id="section-02">
                         <div>
                             <div class="line-full"></div>

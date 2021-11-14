@@ -60,12 +60,14 @@ p {
   font-size: 15px;
   line-height: 25px;
 }
+
 /* Box */
 .text-box {
   width: 275px;
 }
+
 /* Button */
-a.primary {
+a.default {
   font-family: var(--font-family);
   color: var(--primary-dark);
   border: 1px solid var(--font-light);
@@ -84,13 +86,13 @@ a.primary {
   padding-right: 15px;
   transition: 0.5s;
 }
-
-a.primary:hover {
+a.default:hover {
   color: var(--font-light);
   border: 1px solid var(--font-light);
   background-color: var(--primary-dark);
   transition: 0.5s;
 }
+
 /* Flexbox */
 .flex-container {
   display: flex;
@@ -111,15 +113,18 @@ a.primary:hover {
 .spacer {
   height: 82px;
 }
-
 .line-full {
   width: 100%;
   border: 1px solid var(--secondary-dark);
 }
+
 /* Position */
 .margin-main-x {
   margin-left: 50px;
   margin-right: 50px;
+}
+.absolute {
+  position: absolute;
 }
 
 /* Main container */
@@ -129,7 +134,6 @@ a.primary:hover {
   border-radius: 35px;
   max-width: 1590px;
 }
-
 @media (min-width: 1590px) {
   .main-container {
     margin-top: 25px;

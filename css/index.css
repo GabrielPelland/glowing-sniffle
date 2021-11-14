@@ -1,7 +1,7 @@
+/* Positions */
 #left-content {
     width: 455px;
 }
-
 #section-01 {
     margin-top: 150px;
 }
@@ -14,6 +14,7 @@
     margin-top: 110px;
 }
 
+/* Images */
 #img-mars {
     height: 1200px;
     width: 1150px;
@@ -27,16 +28,16 @@
 
     position: absolute;
 }
-
 #img-rocket {
     margin-bottom: -110px;
     margin-left: 175px;
 }
-
 #img-venus {
     margin-bottom: -4px;
     margin-top: -630px;
 }
+
+/* Titles */
 #title-01 {
     margin-top: 340px;
     margin-left: 225px
@@ -46,3 +47,8 @@
     margin-top: 110px;
 }
 
+/* For JavaScript */
+#button-move {
+    height: fit-content;
+    width: fit-content;
+}
