@@ -4,7 +4,7 @@ var clickTime = 0.000;
 $(document).ready(function () {
   setTimeout(() => {
     $('#cookie').slideDown(20000);
-  }, 15000);
+  }, 10000);
 });
 function closeCookie(){
   $('#cookie').slideUp(20000);
