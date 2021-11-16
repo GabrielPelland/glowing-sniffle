@@ -70,3 +70,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+#cookie-chargebar {
+    height: 10px;
+    width: 0%;
+    background-color: white;
+}

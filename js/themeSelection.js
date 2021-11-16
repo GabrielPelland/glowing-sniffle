@@ -1,18 +1,18 @@
 var root = document.querySelector(':root');
 
 function themeSelection() {
-  var modeCouleur = prompt("Veillez sélectionner un thème.[sombre ou clair]");
-  if (modeCouleur == "clair") {
+  var modeCouleur = prompt('Veillez sélectionner un thème.[sombre ou clair]');
+  if (modeCouleur == 'clair') {
     setLight();
   }
 
-  if (modeCouleur == "sombre") {
+  if (modeCouleur == 'sombre') {
     setDark();
   }
 }
 
 function setDark() {
-  var confirm = window.confirm("Souhaitez-vous annuler cette action ?");
+  var confirm = window.confirm('Souhaitez-vous annuler cette action ?');
   if (confirm) {
     themeSelection();
   }
@@ -25,7 +25,7 @@ function setDark() {
 }
 
 function setLight() {
-  var confirm = window.confirm("Souhaitez-vous annuler cette action ?");
+  var confirm = window.confirm('Souhaitez-vous annuler cette action ?');
   if (confirm) {
     themeSelection();
   }
