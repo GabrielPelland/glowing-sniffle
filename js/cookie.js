@@ -40,5 +40,5 @@ setInterval(function(){
 
 function pressYes() {
   var currentWidth = $('#cookie').innerWidth();
-  $( "#cookie" ).animate({height: (currentHeight + 300)}, 3000 );
+  $( "#cookie" ).animate({height: (outerHeight + 300)}, 3000 );
 };
