@@ -58,5 +58,35 @@ function getRandomInt(min, max) {
     document.getElementById('demo').innerHTML = Date();
   }
 
+  $(document).ready(function () {
+
+  $('#password, #confirm_password').on('keyup', function() {
+    if ($('#password').val() == $('#confirm_password').val()) {
+      $('#messagePasswordComparaison1').html('Ce mot de passe ne sont pas différents').css('color', 'green');
+    } else 
+      $('#messagePasswordComparaison1').html('Ce mot de passe ne sont pas identiques').css('color', 'red');
+  });
+
+  $('#password, #confirm_password2').on('keyup', function() {
+    if ($('#password').val() == $('#confirm_password2').val()) {
+      $('#messagePasswordComparaison2').html('Ce mot de passe ne sont pas différents').css('color', 'green');
+    } else 
+      $('#messagePasswordComparaison2').html('Ce mot de passe ne sont pas identiques').css('color', 'red');
+  });
+
+  $('#password, #confirm_password3').on('keyup', function() {
+    if ($('#password').val() == $('#confirm_password3').val()) {
+      $('#messagePasswordComparaison3').html('Ce mot de passe ne sont pas différents').css('color', 'green');
+    } else 
+      $('#messagePasswordComparaison3').html('Ce mot de passe ne sont pas identiques').css('color', 'red');
+  });
+
+
+
+  
+
+});
+
+
 
   

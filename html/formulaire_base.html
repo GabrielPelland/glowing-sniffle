@@ -21,6 +21,7 @@
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
 
     <!-- scripts -->
     <script src="../js/formulaire.js"></script>
@@ -89,5 +90,62 @@
             <p id="codePostalChoisie"></p>
         </form>
     </div>
+
+    <br><br><br><br>
+
+    <p class="InlineWords">Adresse : </p> 
+    <p class="InlineWords" id="Adresse"></p>
+    <button type="button" onclick="IncrementerAdresse()">+</button>
+    <label for="fname">rue</label>
+    <input type="text" id="fname" name="fname"><br><br>
+
+    <br><br>
+
+    <p>Est-ce que ceci est votre code-postal?</p>
+    <p id="CodePostal">2G4 5J3</p>
+    <button type="button" onclick="codePostalChoisie()">Oui</button>
+    <button type="button" onclick="generateRandomCodePostal()">Non</button>
+
+
+    <p>Code Postal choisie: </p>
+    <p id="codePostalChoisie"></p>
+
+    <br><br><br><br>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <label>Mot de passe :
+        <input name="password" id="password" type="password" />
+    </label>
+
+      <br>
+
+    <label>Reconfirmer votre mot de passe une deuxième fois :
+        <input type="password" name="confirm_password" id="confirm_password" />
+        <span id='messagePasswordComparaison1'></span>
+    </label>
+
+    <br>
+
+    <label>Reconfirmer votre mot de passe une troisième fois :
+        <input type="password" name="confirm_password2" id="confirm_password2" />
+        <span id='messagePasswordComparaison2'></span>
+    </label>
+
+    <br>
+
+    <label>Reconfirmer votre mot de passe une quatrième fois :
+        <input type="password" name="confirm_password3" id="confirm_password3" />
+        <span id='messagePasswordComparaison3'></span>
+    </label>
+
+</form>
+    
+
+
+
+
+    
+
 
 </html>
