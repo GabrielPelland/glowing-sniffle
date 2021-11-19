@@ -50,13 +50,15 @@
         <!-- form -->
         <form action="/action_page.php">
             <div class="x">
-                <div class="y">veuillez remplir le formulaire pour vous inscrire</div>
+                <div class="y">Veuillez remplir le formulaire pour vous inscrire</div>
             </div>
 
-            <div id="phone1"></div>
+            <p class="InlineWords">Téléphone</p>
+            <input type="text"  id="Telephone" name="fname"><br><br>
+            <button type="button" onclick="ValidePhoneNumber()">Valider</button>
+            <br><br>
 
-
-            <p>Téléphone</p>
+            <p>Téléphone Cellullaire</p>
             <button type="button" onclick="random3DigitsEntry()">Générer</button>
             <button type="button" onclick="random3Digits()">Générer</button>
             <button type="button" onclick="random4Digits()">Générer</button>
@@ -70,13 +72,33 @@
             </div>
 
             <br><br><br><br>
+        
+            <p class="InlineWords">Adresse</p>
+            <input type="text"  id="Adresse" name="fname"><br><br>
+            <button type="button" onclick="ValidateAdresse()">Valider</button>
+            <br><br>
 
-
-            <p class="InlineWords">Adresse : </p>
-            <p class="InlineWords" id="Adresse"></p>
-            <button type="button" onclick="IncrementerAdresse()">+</button>
             <label for="fname">rue</label>
-            <input type="text" id="fname" name="fname"><br><br>
+            <input type="text" id="Rue" name="fname"><br><br>
+            <button type="button" onclick="ValidateRue()">Valider</button>
+
+            <br><br>
+
+            <label for="fname">Email</label>
+            <input type="text" id="Email" name="fname"><br><br>
+            <button type="button" onclick="ValidateEmail()">Valider</button>
+
+            <br><br>
+
+            <label for="fname">Votre Age</label>
+            <input type="text" id="Age" name="fname"><br><br>
+            <button type="button" onclick="ValidateAge()">Valider</button>
+
+            <br><br>
+            
+            <label for="fname">Votre Age dans 13 ans</label>
+            <input type="text" id="Age13" name="fname"><br><br>
+            <button type="button" onclick="ValidateAge13()">Valider</button>
 
             <br><br>
 
@@ -85,33 +107,62 @@
             <button type="button" onclick="codePostalChoisie()">Oui</button>
             <button type="button" onclick="generateRandomCodePostal()">Non</button>
 
-
             <p>Code Postal choisie: </p>
             <p id="codePostalChoisie"></p>
         </form>
+
+        <br><br>
+
+
+        <label>Mot de passe :
+            <input name="password" id="password" type="password" />
+        </label>
+    
+          <br>
+            <p id="messagePasswordLowerCase"></p>
+            <p id="messagePasswordLength"></p>
+            <p id="messagePasswordUpperCase"></p>
+            <p id="messageGrecMinuscule"></p>
+            <p id="messageNombre"></p>
+            <p id="messageHTML"></p>
+            <p id="messageAdresse"></p>
+            <p id="messageGrecMajuscule"></p>
+    
+        <label>Reconfirmer votre mot de passe une deuxième fois :
+            <input type="password" name="confirm_password" id="confirm_password" />
+            <span id='messagePasswordComparaison1'></span>
+        </label>
+    
+        <br>
+    
+        <label>Reconfirmer votre mot de passe une troisième fois :
+            <input type="password" name="confirm_password2" id="confirm_password2" />
+            <span id='messagePasswordComparaison2'></span>
+        </label>
+    
+        <br>
+    
+        <label>Reconfirmer votre mot de passe une quatrième fois :
+            <input type="password" name="confirm_password3" id="confirm_password3" />
+            <span id='messagePasswordComparaison3'></span>
+        </label>
+    
+        <br><br><br><br>  
+    
+        <label>Pour valider votre mots de passes veuillez écrire : <span class="unselectable"> Gilles-Philippe Grégoire est le meilleur professeur de site web </span>
+            <br>
+            <input type="text" id="validation" name="fname">
+        </label>
+        <button type="button" onclick="validation()">Confirmer</button>
+
+        <br><br><br><br>
+
+        <button type="button" onclick="ValiderEverything()">VALIDER_EVERYTHING</button>
+
+        <br><br><br><br>
     </div>
 
-    <br><br><br><br>
-
-    <p class="InlineWords">Adresse : </p> 
-    <p class="InlineWords" id="Adresse"></p>
-    <button type="button" onclick="IncrementerAdresse()">+</button>
-    <label for="fname">rue</label>
-    <input type="text" id="fname" name="fname"><br><br>
-
-    <br><br>
-
-    <p>Est-ce que ceci est votre code-postal?</p>
-    <p id="CodePostal">2G4 5J3</p>
-    <button type="button" onclick="codePostalChoisie()">Oui</button>
-    <button type="button" onclick="generateRandomCodePostal()">Non</button>
-
-
-    <p>Code Postal choisie: </p>
-    <p id="codePostalChoisie"></p>
-
-    <br><br><br><br>
-
+    
 
     </label>
 

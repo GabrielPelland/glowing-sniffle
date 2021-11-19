@@ -4,6 +4,10 @@
   --font-family: 'Poppins', sans-serif;
   --font-light: #FFFFFF;
   --font-gray: #FFFFFF;
+  --poggers: #00ff00;
+  --not-poggers: #ff0000;
+  --password-poggers: #00ff00;
+  --password-not-poggers: #ff0000;
 }
 
 body {
@@ -60,7 +64,7 @@ h5 {
   font-size: 8px;
   line-height: 15px;
 }
-p {
+p, label {
   font-family: var(--font-family);
   color: var(--font-gray);
   font-style: normal;
