@@ -9,7 +9,6 @@
 
     <!-- import -->
     <!-- styles -->
-    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/formulaire_base.css">
 
     <!-- fonts -->
@@ -71,12 +70,14 @@
 
             <br><br><br><br>
 
+            <p class="InlineWords">Adresse</p>
+            <input type="text"  id="Adresse" name="fname"><br><br>
+            <button type="button" onclick="ValidateAdresse()">Valider</button>
+            <br><br>
 
-            <p class="InlineWords">Adresse : </p>
-            <p class="InlineWords" id="Adresse"></p>
-            <button type="button" onclick="IncrementerAdresse()">+</button>
             <label for="fname">rue</label>
             <input type="text" id="fname" name="fname"><br><br>
+        
 
             <br><br>
 
@@ -88,17 +89,19 @@
 
             <p>Code Postal choisie: </p>
             <p id="codePostalChoisie"></p>
+
         </form>
+
+        <label>Pour valider vos entrées saisies veuillez écrire : <span class="unselectable"> Gilles-Philippe Grégoire est le meilleur professeur de site web </span>
+            <br>
+            <input type="text" id="validation" name="fname">
+        </label>
+        <button type="button" onclick="validation()">Confirmer</button>
     </div>
 
     <br><br><br><br>
 
-    <p class="InlineWords">Adresse : </p> 
-    <p class="InlineWords" id="Adresse"></p>
-    <button type="button" onclick="IncrementerAdresse()">+</button>
-    <label for="fname">rue</label>
-    <input type="text" id="fname" name="fname"><br><br>
-
+   
     <br><br>
 
     <p>Est-ce que ceci est votre code-postal?</p>
@@ -112,16 +115,51 @@
 
     <br><br><br><br>
 
-
+    <label>Mot de passe :
+        <input name="password" id="password" type="password" />
     </label>
 
+      <br>
+        <p id="messagePasswordLowerCase"></p>
+        <p id="messagePasswordLength"></p>
+        <p id="messagePasswordUpperCase"></p>
+        <p id="messageGrecMinuscule"></p> 
+        <p id="messageNombre"></p>
+        <p id="messageHTML"></p>
+        <p id="messageAdresse"></p>
+        <p id="messageGrecMajuscule"></p>
+        
+
+
+    <label>Reconfirmer votre mot de passe une deuxième fois :
+        <input type="password" name="confirm_password" id="confirm_password" />
+        <span id='messagePasswordComparaison1'></span>
+    </label>
+
+    <br>
+
+    <label>Reconfirmer votre mot de passe une troisième fois :
+        <input type="password" name="confirm_password2" id="confirm_password2" />
+        <span id='messagePasswordComparaison2'></span>
+    </label>
+
+    <br>
+
+    <label>Reconfirmer votre mot de passe une quatrième fois :
+        <input type="password" name="confirm_password3" id="confirm_password3" />
+        <span id='messagePasswordComparaison3'></span>
+    </label>
+
+    <br><br><br><br>  <br><br><br><br>  <br><br><br><br>
+
+  
+
+
+    <br><br><br><br>  <br><br><br><br>  <br><br><br><br>
+    <br><br><br><br>  <br><br><br><br>  <br><br><br><br>
+    <br><br><br><br>  <br><br><br><br>  <br><br><br><br>
+
+ 
 </form>
-    
-
-
-
-
-    
-
 
 </html>
