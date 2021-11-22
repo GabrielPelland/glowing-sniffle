@@ -1,6 +1,7 @@
 var e = e || window.event;
 var isFollowing = false;
 
+//Déclanché quand la sourie est sur le bouton
 $(document).ready(function(){
     $( "a.mouseOver" ).mouseover(function() {
         $("#button-move").addClass("absolute");
@@ -8,6 +9,7 @@ $(document).ready(function(){
     });
 });
 
+//Tracker continuellement la position de la sourie
 jQuery(function($) {
     mousePos = { x : 0, y : 0 }; 
     $(document).mousemove(function(event) {
@@ -16,6 +18,7 @@ jQuery(function($) {
     });
 });
 
+//Affecter la position de la sourie au bouton
 $(document).on('mousemove', function(e){
     if(isFollowing == true) {
         $('#button-move').css({

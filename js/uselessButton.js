@@ -1,3 +1,4 @@
+//Fonctions inutiles
 function erreur01() {
     alert('Non, pas cette fois');
 }
