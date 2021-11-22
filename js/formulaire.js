@@ -1,26 +1,31 @@
 var root = document.querySelector(":root");
 
-
+//Attend que tout mon site web soit chargé avant de démarré ma fonction
 $(document).ready(function () {
+  //Met à jour les vérifications du mot de passe
   UpdatePasswordRequirement();
 });
 
+//Retourne un entier aléatoirement
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
 
+//Met 3 chiffre aléatoire (peut commencer par 00) pour mon premier téléphone
 function random3DigitsEntry() {
   var value = Math.random().toString().slice(2, 5);
   document.getElementById("phoneEntry1").innerHTML = value;
 }
 
+//Met 3 chiffre aléatoire (peut commencer par 00) pour mon deuxième téléphone
 function random3Digits() {
   var value = Math.random().toString().slice(2, 5);
   document.getElementById("phoneEntry2").innerHTML = value;
 }
 
+//Met 4 chiffre aléatoire (peut commencer par 00) pour mon troisième téléphone
 function random4Digits() {
   var value = Math.random().toString().slice(2, 6);
   document.getElementById("phoneEntry3").innerHTML = value;
@@ -29,6 +34,7 @@ function random4Digits() {
 var codePostal;
 var adresse = 0;
 
+//Génère un code postal aléatoire composé de lettre et de nombre
 function generateRandomCodePostal() {
   codePostal = generateRandomLetter();
   codePostal = codePostal + generateRandomStringNumber();
@@ -40,29 +46,35 @@ function generateRandomCodePostal() {
   document.getElementById("CodePostal").innerHTML = codePostal;
 }
 
+//Met à jour le code Postal choisie
 function codePostalChoisie() {
   document.getElementById("codePostalChoisie").innerHTML = codePostal;
 }
 
+//Retourne une lettre majuscule de l'alphabet aléatoirement
 function generateRandomLetter() {
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   return alphabet[Math.floor(Math.random() * alphabet.length)];
 }
 
+//Retourne un entier aléatoire entre 0 et 9
 function generateRandomStringNumber() {
   const alphabet = "0123456789";
   return alphabet[Math.floor(Math.random() * alphabet.length)];
 }
 
+//Augmente l'adresse
 function IncrementerAdresse() {
   adresse++;
   document.getElementById("Adresse").innerHTML = adresse;
 }
 
+//Augmente l'adresse
 function test() {
   document.getElementById("demo").innerHTML = Date();
 }
 
+//Variables
 var lowerCaseLetters = /[a-z]/g;
 var numbers = /[0-9]/g;
 var numberValidation = /^[0-9]+$/;
@@ -75,6 +87,7 @@ var letters = /[a-z]/g;
 
 var addresseValue;
 
+//Retourne un message d'erreur si le paramètre ne contient pas un nombre
 function CheckContainNumber(valueToCheck, errorMessage) {
   if (!valueToCheck.match(numbers)) {
     errorMessage += "\r\n";
@@ -83,6 +96,7 @@ function CheckContainNumber(valueToCheck, errorMessage) {
   return errorMessage;
 }
 
+//Retourne un message d'erreur si le paramètre peut uniquement contenir des nombres
 function CheckOnlyContainNumber(valueToCheck, errorMessage) {
   if (!valueToCheck.match(numberValidation)) {
     errorMessage += "\r\n";
@@ -91,6 +105,7 @@ function CheckOnlyContainNumber(valueToCheck, errorMessage) {
   return errorMessage;
 }
 
+//Retourne un message d'erreur si le paramètre peut uniquement contenir des lettres
 function CheckOnlyContainLetter(valueToCheck, errorMessage) {
   if (!valueToCheck.match(lettreValidation)) {
     errorMessage += "\r\n";
@@ -99,6 +114,7 @@ function CheckOnlyContainLetter(valueToCheck, errorMessage) {
   return errorMessage;
 }
 
+//Retourne un message d'erreur si le paramètre ne contient pas un caractère en minuscule
 function CheckLowerCaseLetters(valueToCheck, errorMessage) {
   if (!valueToCheck.match(letters)) {
     errorMessage += "\r\n";
@@ -107,6 +123,8 @@ function CheckLowerCaseLetters(valueToCheck, errorMessage) {
   return errorMessage;
 }
 
+
+//Retourne un message d'erreur si le paramètre ne contient pas un caractère en majuscule
 function CheckUpperCaseLetters(valueToCheck, errorMessage) {
   if (!valueToCheck.match(upperCaseLetters)) {
     errorMessage += "\r\n";
@@ -115,6 +133,8 @@ function CheckUpperCaseLetters(valueToCheck, errorMessage) {
   return errorMessage;
 }
 
+
+//Retourne un message d'erreur si le paramètre est plus petit que number
 function CheckSmallerThan(valueToCheck, errorMessage, number) {
   if (valueToCheck.length < number) {
     errorMessage += "\r\n";
@@ -123,6 +143,8 @@ function CheckSmallerThan(valueToCheck, errorMessage, number) {
   return errorMessage;
 }
 
+
+//Retourne un message d'erreur si le paramètre a un champ vide
 function CheckNull(valueToCheck, errorMessage) {
   if (valueToCheck == "") {
     errorMessage += "\r\n";
@@ -131,6 +153,8 @@ function CheckNull(valueToCheck, errorMessage) {
   return errorMessage;
 }
 
+
+//Retourne un message d'erreur si le paramètre ne peut pas être 0
 function CheckZero(valueToCheck, errorMessage) {
   if (valueToCheck == "0") {
     errorMessage += "\r\n";
@@ -139,6 +163,8 @@ function CheckZero(valueToCheck, errorMessage) {
   return errorMessage;
 }
 
+
+//Retourne un message d'erreur si le paramètrene peut pas être un chiffre négatif
 function CheckNegative(valueToCheck, errorMessage) {
   if (valueToCheck < 0) {
     errorMessage += "\r\n";
@@ -147,12 +173,14 @@ function CheckNegative(valueToCheck, errorMessage) {
   return errorMessage;
 }
 
+//Met à jour l'adresse multiplié par deux
 function UpdateAdresseValue() {
   addresseValue = document.getElementById("Adresse").value;
   var temp = parseInt(addresseValue) * 2;
   addresseValue = temp;
 }
 
+//Vérifie si l'adresse est valide
 function ValidateAdresse() {
   var messageError = "Erreur de validation dans l'adresse. L'adresse : ";
   var address = document.getElementById("Adresse").value;
@@ -171,6 +199,7 @@ function ValidateAdresse() {
   }
 }
 
+//Vérifie si le telephone est valide
 function ValidePhoneNumber() {
   var phoneCheck = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; //https://www.w3resource.com/javascript/form/phone-no-validation.php
   var phone = document.getElementById("Telephone").value;
@@ -184,6 +213,7 @@ function ValidePhoneNumber() {
   }
 }
 
+//Vérifie si la rue est valide
 function ValidateRue() {
   var messageError = "Erreur de validation dans la rue. La rue : ";
   var address = document.getElementById("Rue").value;
@@ -200,6 +230,7 @@ function ValidateRue() {
   }
 }
 
+//Vérifie si l'adresse courriel est valide
 function ValidateEmail() {
   var emailCheck =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; //https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/web_tests/fast/forms/resources/ValidityState-typeMismatch-email.js?q=ValidityState-typeMismatch-email.js&ss=chromium
@@ -214,6 +245,7 @@ function ValidateEmail() {
   }
 }
 
+//Vérifie si le mot de passe est valide
 function DeepFormValidation() {
   var passwordValue = document.getElementById("password").value;
   var errorMessage =
@@ -251,6 +283,7 @@ function DeepFormValidation() {
   }
 }
 
+//Vérifie si l'age est valide
 function ValidateAge() {
   var age = document.getElementById("Age").value;
   var errorMessage = "Erreur de validation dans l'age. L'age : ";
@@ -271,6 +304,7 @@ function ValidateAge() {
 
 var age = 0;
 
+//Vérifie si la date est valide
 function ValidateDate() {
   var dateCheck = /^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$/; //https://stackoverflow.com/questions/22061723/regex-date-validation-for-yyyy-mm-dd
   var date = document.getElementById("Date").value;
@@ -295,6 +329,7 @@ function ValidateDate() {
   }
 } //Extract age: https://stackoverflow.com/questions/4060004/calculate-age-given-the-birth-date-in-the-format-yyyymmdd
 
+//Envoie le message de validation de la date
 function ValidateDateMessage() {
   if (age == document.getElementById("Age").value) {
     $("#Date").css("color", "var(--poggers)");
@@ -305,6 +340,7 @@ function ValidateDateMessage() {
   }
 }
 
+//Vérifie si l'age + 13 est valide
 function ValidateAge13() {
   var age = document.getElementById("Age").value;
   var age13 = document.getElementById("Age13").value;
@@ -329,6 +365,7 @@ function ValidateAge13() {
   }
 }
 
+//Envoie les messages de validation pour le mot de passe
 function validation() {
   var validation = document.getElementById("validation").value;
 
@@ -362,6 +399,7 @@ function validation() {
   }
 }
 
+//Valide tous les champs d'entrée présent dans le formulaire
 function ValiderEverything() {
   ValidePhoneNumber();
   ValidateAdresse();
@@ -373,6 +411,7 @@ function ValiderEverything() {
   DeepFormValidation();
 }
 
+//Vérifie les critère du mot de passe
 function UpdatePasswordRequirement() {
   var passwordValue = document.getElementById("password").value;
 
@@ -476,11 +515,14 @@ function UpdatePasswordRequirement() {
   }
 }
 
+//Attend que tout mon site web soit chargé avant de démarré la première fonction
 $(document).ready(function () {
+  //Met à jour les validités du mot de passe lorsqu'on tape dans le champs d'entrée
   $("#password, #confirm_password, #Adresse").on("keyup", function () {
     UpdatePasswordRequirement();
   });
 
+  //Vérifie si le mot de passe principal correspond avec le 2e entrée de mot de passe, lorsqu'une entrée est écrite dans le champ d'entrée
   $("#password, #confirm_password2").on("keyup", function () {
     if ($("#password").val() == $("#confirm_password2").val()) {
       $("#messagePasswordComparaison2")
@@ -489,6 +531,7 @@ $(document).ready(function () {
     } else $("#messagePasswordComparaison2").html("Ce mot de passe ne sont pas identiques").css("color", "var(--not-poggers)");
   });
 
+    //Vérifie si le mot de passe principal correspond avec le 3e entrée de mot de passe, lorsqu'une entrée est écrite dans le champ d'entrée
   $("#password, #confirm_password3").on("keyup", function () {
     if ($("#password").val() == $("#confirm_password3").val()) {
       $("#messagePasswordComparaison3")
