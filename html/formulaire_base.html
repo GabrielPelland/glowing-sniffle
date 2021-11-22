@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- head -->
 <head>
+     <!-- meta -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +19,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-
     <!-- scripts -->
     <script src="../js/formulaire.js"></script>
+    <script src="../js/themeSelection.js"></script>
 </head>
 
 <body>
@@ -36,7 +38,7 @@
                     <img onclick="themeSelection()" src="../images/light_mode_white_icon.svg" class="icon">
                 </div>
                 <div>
-                    <img src="../images/search_icon.svg">
+                    <img onmouseleave="erreur05()" class="icon" src="../images/search_icon.svg">
                 </div>
                 <div>
                     <img src="../images/account_icon.svg">
@@ -51,13 +53,16 @@
         <form action="/action_page.php">
             <h2>Joindre l'aventure</h2>
             <h3>Informations</h3>
+            <!-- Section 01 -->
             <table>
                 <tr>
+                    <!-- Téléphone -->
                     <th class="informations">
                         <p class="InlineWords">Téléphone</p><br>
                         <input type="text" id="Telephone" name="fname">
                         <button type="button" onclick="ValidePhoneNumber()">Valider</button>
                     </th>
+                    <!-- Adresse -->
                     <th>
                         <p class="InlineWords">Adresse</p><br>
                         <input type="text" id="Adresse" name="fname">
@@ -65,18 +70,21 @@
                     </th>
                 </tr>
                 <tr>
+                    <!-- Email -->
                     <th class="informations">
-                        <label for="fname">Email</label><br>
+                        <label for="fname">Adresse courriel</label><br>
                         <input type="text" id="Email" name="fname">
                         <button type="button" onclick="ValidateEmail()">Valider</button>
                     </th>
+                    <!-- Rue -->
                     <th class="informations">
-                        <label for="fname">rue</label><br>
+                        <label for="fname">Rue</label><br>
                         <input type="text" id="Rue" name="fname">
                         <button type="button" onclick="ValidateRue()">Valider</button>
                     </th>
                 </tr>
                 <tr>
+                    <!-- Code postal -->
                     <th class="informations">
                         <p>Est-ce que <span id="CodePostal">2G4 5J3</span> est votre code-postal?</p>
                         <button type="button" onclick="codePostalChoisie()">Oui</button>
@@ -85,6 +93,7 @@
                         <p>Code Postal choisie: </p>
                         <p id="codePostalChoisie"></p>
                     </th>
+                    <!-- Cellulaire -->
                     <th class="informations">
                         <p>Téléphone Cellullaire</p>
                         <button type="button" onclick="random3DigitsEntry()">Générer</button>
@@ -101,11 +110,13 @@
                     </th>
                 </tr>
                 <tr>
+                    <!-- Age -->
                     <th class="informations">
                         <label for="fname">Votre Age</label><br>
                         <input type="text" id="Age" name="fname">
                         <button type="button" onclick="ValidateAge()">Valider</button>
                     </th>
+                    <!-- Date naissance -->
                     <th class="informations">
                         <label for="fname">Votre date de naissance</label><br>
                         <input type="text" id="Date" name="fname">
@@ -113,6 +124,7 @@
                     </th>
                 </tr>
                 <tr>
+                    <!-- Age +13 -->
                     <th class="informations">
                         <label for="fname">Votre Age dans 13 ans</label><br>
                         <input type="text" id="Age13" name="fname">
@@ -124,30 +136,35 @@
                 <div class="y">Veuillez remplir le formulaire pour vous inscrire</div>
             </div>
             <h3>Cybersécurité du FBI</h3>
-            
+            <!-- Section 02 -->
             <table>
                 <tr>
+                    <!-- MDP -->
                     <th class="motdepasse">
                         <label>Mot de passe :</label><br>
                         <input name="password" id="password" type="password" />
                     </th>
+                    <!-- MDP1 -->
                     <th class="motdepasse">
                         <label>Reconfirmez encore votre mot de passe (1):</label> <br>
                         <input type="password" name="confirm_password" id="confirm_password" /><br>
-                        <span id='messagePasswordComparaison1'></span>
+                        <p id='messagePasswordComparaison1'></p>
                     </th>
+                    <!-- MDP2 -->
                     <th class="motdepasse">
                         <label>Reconfirmez encore votre mot de passe (2):</label><br>
                         <input type="password" name="confirm_password2" id="confirm_password2" /><br>
-                        <span id='messagePasswordComparaison2'></span>
+                        <p id='messagePasswordComparaison2'></p>
                     </th>
+                    <!-- MDP3 -->
                     <th class="motdepasse">
                         <label>Reconfirmez encore votre mot de passe (3):</label><br>
                         <input type="password" name="confirm_password3" id="confirm_password3" /><br>
-                        <span id='messagePasswordComparaison3'></span>
+                        <p id='messagePasswordComparaison3'></p>
                     </th>
                 </tr>
                 <tr>
+                    <!-- MDP Contraint-->
                     <th colspan="4">
                         <p id="messagePasswordLowerCase"></p>
                         <p id="messagePasswordLength"></p>
@@ -160,6 +177,7 @@
                     </th>
                 </tr>
                 <tr>
+                    <!-- Validation MDP -->
                     <th colspan="4">
                         <label>Pour valider votre mots de passes veuillez écrire : <span class="unselectable">
                                 Gilles-Philippe Grégoire
@@ -170,6 +188,7 @@
                     </th>
                 </tr>
                 <tr>
+                    <!-- Tout valider -->
                     <th>
                         <button type="button" onclick="ValiderEverything()">VALIDER_EVERYTHING</button>
                     </th>

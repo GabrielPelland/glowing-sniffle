@@ -1,34 +1,29 @@
+/* Initalisation */
 body {
   margin: 0;
 }
-
 .x {
   animation: x 13s linear infinite alternate;
   width: 100px;
   height: 100px;
 }
-
 .y {
   animation: y 7s linear infinite alternate;
 }
-
 @keyframes x {
   100% {
     transform: translateX(calc(100vw - 100px));
   }
 }
-
 @keyframes y {
   100% {
     transform: translateY(calc(100vh - 100px));
   }
 }
-
 .InlineWords {
   display: inline;
   word-wrap: break-word;
 }
-
 .unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -38,6 +33,7 @@ body {
   user-select: none;
 }
 
+/* Form */
 input {
   padding: 5px 10px;
   margin: 8px 0;
@@ -45,6 +41,7 @@ input {
   box-sizing: border-box;
   border-radius: 6px;
   font-size: 15px;
+  background-color: var(--input-color);
 }
 textarea {
   width: 100%;
@@ -54,8 +51,10 @@ textarea {
   box-sizing: border-box;
   font-size: 15px;
 }
+
+/* Button */
 button {
-  background-color: var(--font-light);
+  background-color: var(--font-color);
   border: none;
   color: var(--primary-dark);
   padding: 2px 10px;
@@ -67,16 +66,16 @@ button {
   font-size: 15px;
   line-height: 30px;
   font-family: var(--font-family);
-  border: 1px solid white;
+  border: 1px solid var(--font-color);
   cursor: pointer;
   line-height: 25px;
   border-radius: 6px;
+  transition: 0.5s;
 }
-
 button:hover {
   background-color: var(--secondary-dark);
   border: none;
-  color: var(--primary-dark);
+  color: var(--font-color);
   padding: 2px 10px;
   text-align: center;
   text-decoration: none;
@@ -86,20 +85,22 @@ button:hover {
   font-size: 15px;
   line-height: 30px;
   font-family: var(--font-family);
-  border: 1px solid white;
+  border: 1px solid var(--font-color);
   cursor: pointer;
   line-height: 25px;
   border-radius: 6px;
+  transition: 0.5s;
 }
  
 
-
+/* Position */
 form {
   margin: 30px;
 }
 table {
   width: 100%;
   text-align: left;
+  color: var(--table-color);
 }
 th.informations {
   vertical-align: top;

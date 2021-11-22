@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- head -->
 <head>
+    <!-- meta -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursed Html </title>
+    <title>Cursed Html</title>
 
     <!-- import -->
     <!-- styles -->
@@ -18,15 +20,33 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    
     <!-- jQuery -->
+
+    <!-- Nous avons importé le framework jQuery, afin d'alléger le site web, nous l'importons directement des serveurs de google.com
+         Voici les fonctions utilisés:
+            - animate(), permet d'animer la modification de propriété css
+            - slideDonw() et SlideUp(), permet d'afficher et masquer des éléments avec une animation de translation
+            - css(), permet de modifer ou ajouter des propriétés css à un élément de façon simplifié
+            - val(), permet d'avoir la valeur de éléments sélectionné
+            - selectors, permet de sélectionner des éléments de façon simplifié
+            - innerwidth(), permet d'accéder à la valeur du width d'un élément
+            - mousedown()
+            - mouseleave()
+            - mouseclick()
+            - html(), permet de modifier le contenun HTMl de façon simplifié.
+        -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- scripts -->
     <script src="js/themeSelection.js"></script>
     <script src="js/buttonMove.js"></script>
     <script src="js/cookie.js"></script>
+    <script src="js/uselessButton.js"></script>
 </head>
 
+<!-- body-->
 <body>
     <!-- cookie -->
     <div id="cookie">
@@ -36,7 +56,7 @@
             </div>
             <div>
                 <a id="cookie-off">Non</a>
-                <a onclick="pressYes()" class="default">Oui !</a>
+                <a onclick="pressYes()" onmouseleave="erreur05()" onmouseup="erreur06()" class="default">Oui !</a>
             </div>
             <div>
                 <h5>Veillez rester appuyer 5 secondes pour confirmer.</h5>
@@ -53,7 +73,7 @@
                     <img onclick="themeSelection()" src="images/light_mode_white_icon.svg" class="icon">
                 </div>
                 <div>
-                    <img src="images/search_icon.svg">
+                    <img ondblclick="erreur05()" class="icon" src="images/search_icon.svg">
                 </div>
                 <div>
                     <img src="images/account_icon.svg">
@@ -104,5 +124,4 @@
         <img src="images/venus_image.svg" id="img-venus">
     </div>
 </body>
-
 </html>

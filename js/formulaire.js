@@ -383,13 +383,13 @@ function UpdatePasswordRequirement() {
   } else {
     $("#messagePasswordComparaison1")
       .html("Ce mot de passe ne sont pas identiques")
-      .css("color", "var(--password-not-poggers)");
+      .css("color", "var(--not-poggers)");
   }
 
   if (passwordValue.length < 23) {
     $("#messagePasswordLength")
       .html("✘ Le mot de passe doit être plus grand que 23 caractères")
-      .css("color", "var(--password-not-poggers)");
+      .css("color", "var(--not-poggers)");
   } else {
     $("#messagePasswordLength")
       .html("✔ Le mot de passe est plus grand que 23 caractères")
@@ -403,37 +403,37 @@ function UpdatePasswordRequirement() {
   } else {
     $("#messagePasswordUpperCase")
       .html("✘ Le mot de passe doit contenir un caractère en majuscule")
-      .css("color", "var(--password-not-poggers)");
+      .css("color", "var(--not-poggers)");
   }
 
   if (passwordValue.match(lowerCaseLetters)) {
     $("#messagePasswordLowerCase")
       .html("✔ Le mot de passe contient un caractère en minuscule")
-      .css("color", "var(--password-poggers)");
+      .css("color", "var(--poggers)");
   } else {
     $("#messagePasswordLowerCase")
       .html("✘ Le mot de passe doit contenir un caractère en miniscule")
-      .css("color", "var(--password-not-poggers)");
+      .css("color", "var(--not-poggers)");
   }
 
   if (passwordValue.match(numbers)) {
     $("#messageNombre")
       .html("✔ Le mot de passe contient un nombre")
-      .css("color", "var(--password-poggers)");
+      .css("color", "var(--poggers)");
   } else {
     $("#messageNombre")
       .html("✘ Le mot de passe doit contenir de nombre")
-      .css("color", "var(--password-not-poggers)");
+      .css("color", "var(--not-poggers)");
   }
 
   if (passwordValue.match(html)) {
     $("#messageHTML")
       .html("✔ Le mot de passe contient : Ma passion est le html")
-      .css("color", "var(--password-poggers)");
+      .css("color", "var(--poggers)");
   } else {
     $("#messageHTML")
       .html("✘ Le mot de passe doit contenir : ma passion est le html")
-      .css("color", "var(--password-not-poggers)");
+      .css("color", "var(--not-poggers)");
   }
 
   if (passwordValue.match(grecMiniscule)) {
@@ -441,13 +441,13 @@ function UpdatePasswordRequirement() {
       .html(
         "✔ Le mot de passe contient au moins une des trois première lettre miniscule de lalphabet grec"
       )
-      .css("color", "var(--password-poggers)");
+      .css("color", "var(--poggers)");
   } else {
     $("#messageGrecMinuscule")
       .html(
         "✘ Le mot de passe doit contenir une des trois première lettre miniscule de lalphabet grec"
       )
-      .css("color", "var(--password-not-poggers)");
+      .css("color", "var(--not-poggers)");
   }
 
   if (passwordValue.match(grecMajuscule)) {
@@ -455,24 +455,24 @@ function UpdatePasswordRequirement() {
       .html(
         "✔ Le mot de passe contient au moins une des trois dernière lettre majuscule de lalphabet grec"
       )
-      .css("color", "var(--password-poggers)");
+      .css("color", "var(--poggers)");
   } else {
     $("#messageGrecMajuscule")
       .html(
         "✘ Le mot de passe doit contenir une des trois dernière lettre majuscule de lalphabet grec"
       )
-      .css("color", "var(--password-not-poggers)");
+      .css("color", "var(--not-poggers)");
   }
 
   UpdateAdresseValue();
   if (passwordValue.match(addresseValue)) {
     $("#messageAdresse")
       .html("✔ Le mot de passe contient votre adresse multiplié par 2")
-      .css("color", "var(--password-poggers)");
+      .css("color", "var(--poggers)");
   } else {
     $("#messageAdresse")
       .html("✘ Le mot de passe doit contenir votre adresse multiplié par deux")
-      .css("color", "var(--password-not-poggers)");
+      .css("color", "var(--not-poggers)");
   }
 }
 
@@ -485,15 +485,15 @@ $(document).ready(function () {
     if ($("#password").val() == $("#confirm_password2").val()) {
       $("#messagePasswordComparaison2")
         .html("Ce mot de passe ne sont pas différents")
-        .css("color", "var(--password-poggers)");
-    } else $("#messagePasswordComparaison2").html("Ce mot de passe ne sont pas identiques").css("color", "var(--password-not-poggers)");
+        .css("color", "var(--poggers)");
+    } else $("#messagePasswordComparaison2").html("Ce mot de passe ne sont pas identiques").css("color", "var(--not-poggers)");
   });
 
   $("#password, #confirm_password3").on("keyup", function () {
     if ($("#password").val() == $("#confirm_password3").val()) {
       $("#messagePasswordComparaison3")
         .html("Ce mot de passe ne sont pas différents")
-        .css("color", "var(--password-poggers)");
-    } else $("#messagePasswordComparaison3").html("Ce mot de passe ne sont pas identiques").css("color", "var(--password-not-poggers)");
+        .css("color", "var(--poggers)");
+    } else $("#messagePasswordComparaison3").html("Ce mot de passe ne sont pas identiques").css("color", "var(--not-poggers)");
   });
 });

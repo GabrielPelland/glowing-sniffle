@@ -20,13 +20,12 @@
     width: 1150px;
     margin-top: -400px;
     margin-left: -100px;
-
     object-fit: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
     position: absolute;
+    z-index: 0;
 }
 #img-rocket {
     margin-bottom: -110px;
