@@ -1,8 +1,9 @@
 var root = document.querySelector(":root");
 
+//Verification choix theme
 function themeSelection() {
   var modeCouleur = prompt(
-    "Veillez sélectionner un thème.[sombre - gillesPhilippe]"
+    "Veillez sélectionner un thème.[sombre, clair, gillesPhilippe]"
   );
   if (modeCouleur == "clair") {
     setLight();
@@ -13,6 +14,7 @@ function themeSelection() {
   }
 }
 
+//Mettre le thème en dark
 function setDark() {
   var confirm = window.confirm("Souhaitez-vous annuler cette action ?");
   if (confirm) {
@@ -23,10 +25,12 @@ function setDark() {
     root.style.setProperty("--font-color", "#FFFFFF");
     root.style.setProperty("--input-color", "#FFFFFF");
     root.style.setProperty("--table-color", "#211539");
+    root.style.setProperty("--font-family","Poppins', sans-serif");
     $("body").css("background-image", "");
   }
 }
 
+//Mettre le thème en clair
 function setLight() {
   var confirm = window.confirm("Souhaitez-vous annuler cette action ?");
   if (confirm) {
@@ -37,10 +41,12 @@ function setLight() {
     root.style.setProperty("--font-color", "#162521");
     root.style.setProperty("--input-color", "#9eefe5");
     root.style.setProperty("--table-color", "#4f7cac");
+    root.style.setProperty("--font-family","Poppins', sans-serif");
     $("body").css("background-image", "");
   }
 }
 
+//Mettre le thème en gillesPhilippe (debug)
 function setGillesPhilippe() {
   var confirm = window.confirm("Souhaitez-vous annuler cette action ?");
   if (confirm) {
