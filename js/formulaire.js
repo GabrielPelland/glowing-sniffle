@@ -329,7 +329,7 @@ function ValidateAge() {
   errorMessage = CheckOnlyContainNumber(age, errorMessage);
 
   if (errorMessage == "Erreur de validation dans l'age. L'age : ") {
-    alert("Votre age est validée.");
+    alert("Votre age est validé.");
     $("#Age").css("color", "var(--poggers)");
 
     dateV = true;
@@ -363,7 +363,7 @@ function ValidateDate() {
     }
     ValidateDateMessage();
   } else {
-    alert("Le format de la date nest pas valide");
+    alert("Le format de la date n'est pas valide");
     $("#Date").css("color", "var(--not-poggers)");
     age = false;
   }
@@ -373,7 +373,7 @@ function ValidateDate() {
 function ValidateDateMessage() {
   if (age == document.getElementById("Age").value) {
     $("#Date").css("color", "var(--poggers)");
-    alert("Le date est valide");
+    alert("Le date est validé");
 
     dateV = true;
   } else {
@@ -417,13 +417,13 @@ function ValidateAge13() {
 }
 
 //Envoie les messages de validation pour le mot de passe
-function validation() {
+function ValidationMessage() {
   var validationContent = document.getElementById("validation").value;
-
   if (
     validationContent ==
     "Gilles-Philippe Grégoire est le meilleur professeur de site web"
   ) {
+    console.log("Validation");
     $("#messagePasswordComparaison2")
       .html("Ce mot de passe ne sont pas différents")
       .css("color", "var(--poggers)");
@@ -478,54 +478,55 @@ function UpdatePasswordRequirement() {
     $("#messagePasswordLength")
       .html("✔ Le mot de passe est plus grand que 23 caractères")
       .css("color", "var(--poggers)");
-      mdp1V = true;
+    mdp1V = true;
   }
 
   if (passwordValue.match(upperCaseLetters)) {
     $("#messagePasswordUpperCase")
       .html("✔ Le mot de passe contient un caractère en majuscule")
       .css("color", "var(--poggers)");
-      mdp1V = true;
+    mdp1V = true;
   } else {
     $("#messagePasswordUpperCase")
       .html("✘ Le mot de passe doit contenir un caractère en majuscule")
       .css("color", "var(--not-poggers)");
-      mdp1V = false;
+    mdp1V = false;
   }
 
   if (passwordValue.match(lowerCaseLetters)) {
     $("#messagePasswordLowerCase")
       .html("✔ Le mot de passe contient un caractère en minuscule")
       .css("color", "var(--poggers)");
-      mdp1V = true;
+    mdp1V = true;
   } else {
     $("#messagePasswordLowerCase")
       .html("✘ Le mot de passe doit contenir un caractère en miniscule")
       .css("color", "var(--not-poggers)");
-      mdp1V = true;
+    mdp1V = true;
   }
 
   if (passwordValue.match(numbers)) {
     $("#messageNombre")
       .html("✔ Le mot de passe contient un nombre")
       .css("color", "var(--poggers)");
-      mdp1V = true;
+    mdp1V = true;
   } else {
     $("#messageNombre")
       .html("✘ Le mot de passe doit contenir de nombre")
       .css("color", "var(--not-poggers)");
-      mdp1V = true;
+    mdp1V = true;
   }
 
   if (passwordValue.match(html)) {
     $("#messageHTML")
       .html("✔ Le mot de passe contient : Ma passion est le html")
       .css("color", "var(--poggers)");
-      mdp1V = true;
+    mdp1V = true;
+  } else {
     $("#messageHTML")
       .html("✘ Le mot de passe doit contenir : ma passion est le html")
       .css("color", "var(--not-poggers)");
-      mdp1V = false;
+    mdp1V = false;
   }
 
   if (passwordValue.match(grecMiniscule)) {
@@ -534,14 +535,14 @@ function UpdatePasswordRequirement() {
         "✔ Le mot de passe contient au moins une des trois première lettre miniscule de lalphabet grec"
       )
       .css("color", "var(--poggers)");
-      mdp1V = true;
+    mdp1V = true;
   } else {
     $("#messageGrecMinuscule")
       .html(
         "✘ Le mot de passe doit contenir une des trois première lettre miniscule de lalphabet grec"
       )
       .css("color", "var(--not-poggers)");
-      mdp1V = false;
+    mdp1V = false;
   }
 
   if (passwordValue.match(grecMajuscule)) {
@@ -550,14 +551,14 @@ function UpdatePasswordRequirement() {
         "✔ Le mot de passe contient au moins une des trois dernière lettre majuscule de lalphabet grec"
       )
       .css("color", "var(--poggers)");
-      mdp1V = true;
+    mdp1V = true;
   } else {
     $("#messageGrecMajuscule")
       .html(
         "✘ Le mot de passe doit contenir une des trois dernière lettre majuscule de lalphabet grec"
       )
       .css("color", "var(--not-poggers)");
-      mdp1V = false;
+    mdp1V = false;
   }
 
   UpdateAdresseValue();
@@ -565,12 +566,12 @@ function UpdatePasswordRequirement() {
     $("#messageAdresse")
       .html("✔ Le mot de passe contient votre adresse multiplié par 2")
       .css("color", "var(--poggers)");
-      mdp1V = true;
+    mdp1V = true;
   } else {
     $("#messageAdresse")
       .html("✘ Le mot de passe doit contenir votre adresse multiplié par deux")
       .css("color", "var(--not-poggers)");
-      mdp1V = false;
+    mdp1V = false;
   }
 }
 
@@ -581,16 +582,17 @@ $(document).ready(function () {
     UpdatePasswordRequirement();
   });
 
-
   //Vérifie si le mot de passe principal correspond avec le 2e entrée de mot de passe, lorsqu'une entrée est écrite dans le champ d'entrée
   $("#password, #confirm_password").on("keyup", function () {
     if ($("#password").val() == $("#confirm_password").val()) {
       $("#messagePasswordComparaison1")
-        .html("Ce mot de passe ne sont pas différents")
+        .html("Ce mot de passe n'est pas différents")
         .css("color", "var(--poggers)");
       mdp2V = true;
     } else {
-      $("#messagePasswordComparaison1").html("Ce mot de passe ne sont pas identiques").css("color", "var(--not-poggers)");
+      $("#messagePasswordComparaison1")
+        .html("Ce mot de passe n'est pas identiques")
+        .css("color", "var(--not-poggers)");
 
       mdp2V = false;
     }
@@ -600,11 +602,13 @@ $(document).ready(function () {
   $("#password, #confirm_password2").on("keyup", function () {
     if ($("#password").val() == $("#confirm_password2").val()) {
       $("#messagePasswordComparaison2")
-        .html("Ce mot de passe ne sont pas différents")
+        .html("Ce mot de passe n'est pas différents")
         .css("color", "var(--poggers)");
       mdp3V = true;
     } else {
-      $("#messagePasswordComparaison2").html("Ce mot de passe ne sont pas identiques").css("color", "var(--not-poggers)");
+      $("#messagePasswordComparaison2")
+        .html("Ce mot de passe n'est pas identiques")
+        .css("color", "var(--not-poggers)");
 
       mdp3V = false;
     }
@@ -614,12 +618,12 @@ $(document).ready(function () {
   $("#password, #confirm_password3").on("keyup", function () {
     if ($("#password").val() == $("#confirm_password3").val()) {
       $("#messagePasswordComparaison3")
-        .html("Ce mot de passe ne sont pas différents")
+        .html("Ce mots de passe n'est'pas différents")
         .css("color", "var(--poggers)");
       mdp4V = true;
     } else {
       $("#messagePasswordComparaison3")
-        .html("Ce mot de passe ne sont pas identiques")
+        .html("Ces mots de passe n'est pas identiques")
         .css("color", "var(--not-poggers)");
       mdp4V = false;
     }
@@ -628,10 +632,24 @@ $(document).ready(function () {
 
 //Validation avant submit
 function send() {
-  if (phoneV == true && adressV == true && emailV == true && streetV == true && numberV == true && cellV == true && ageV == true && dateV == true && agePlusV == true && mdp1V == true && mdp2V == true && mdp3V == true && mdp4V == true && validationV == true) {
-    $('#envoyer').submit();
-  }
-  else {
+  if (
+    phoneV == true &&
+    adressV == true &&
+    emailV == true &&
+    streetV == true &&
+    numberV == true &&
+    cellV == true &&
+    ageV == true &&
+    dateV == true &&
+    agePlusV == true &&
+    mdp1V == true &&
+    mdp2V == true &&
+    mdp3V == true &&
+    mdp4V == true &&
+    validationV == true
+  ) {
+    $("#envoyer").submit();
+  } else {
     alert("Veillez valider avant d'envoyer le formulaire");
     ValiderEverything();
   }
